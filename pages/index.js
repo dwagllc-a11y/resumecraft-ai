@@ -93,4 +93,18 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div style={{ display:
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '48px', padding: '32px 20px', borderTop: '1px solid rgba(255,255,255,0.05)', flexWrap: 'wrap' }}>
+          {[['3,200+', 'Professionals Helped'], ['< 2 min', 'Average Delivery'], ['Claude AI', 'Powered By']].map(([stat, label]) => (
+            <div key={label} style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '24px', fontWeight: '800', color: '#c8b98a' }}>{stat}</div>
+              <div style={{ fontSize: '11px', color: '#4a4535', letterSpacing: '0.08em', textTransform: 'uppercase', marginTop: '4px' }}>{label}</div>
+            </div>
+          ))}
+        </div>
+        <div style={{ textAlign: 'center', padding: '18px', color: '#2a2520', fontSize: '11px', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+          {new Date().getFullYear()} CareerCraft AI
+        </div>
+      </div>
+    </>
+  )
+}
