@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useState } from 'react'
 import Link from 'next/link'
 
 const tools = [
@@ -10,6 +11,20 @@ const tools = [
 ]
 
 export default function Founders() {
+
+  const [bundleLoading, setBundleLoading] = useState(false)
+  const [bundleError, setBundleError] = useState('')
+  const handleBundle = async () => {
+    setBundleLoading(true); setBundleError('')
+    try {
+      const res = await fetch('/api/checkout-bundle-founder', { method: 'POST', headers: { 'Content-Type': 'application/json' } })
+      const data = await res.json()
+      if (data.url) window.location.href = data.url
+      else setBundleError(data.error || 'Could not start checkout.')
+    } catch { setBundleError('Something went wrong.') }
+    setBundleLoading(false)
+  }
+
   return (
     <>
       <Head><title>FounderCraft AI — Fundraise & Build Faster</title><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" /></Head>
@@ -38,6 +53,24 @@ export default function Founders() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div style={{ background: 'linear-gradient(135deg, rgba(167,139,250,0.12), rgba(167,139,250,0.04))', border: `1px solid #a78bfa55`, borderRadius: '16px', padding: '24px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px', marginBottom: '24px' }}>
+            <div>
+              <div style={{ fontSize: '10px', color: '#a78bfa', fontWeight: '800', letterSpacing: '0.1em', marginBottom: '4px' }}>FOUNDERCRAFT BUNDLE</div>
+              <div style={{ fontSize: '18px', fontWeight: '800', color: '#f0ece0', marginBottom: '2px' }}>All 5 Founder Tools</div>
+              <div style={{ fontSize: '12px', color: '#6a6055' }}>Save $13.96 vs buying individually</div>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: '12px', color: '#4a4040', textDecoration: 'line-through' }}>$63.95</div>
+                <div style={{ fontSize: '28px', fontWeight: '900', color: '#a78bfa', lineHeight: 1 }}>$49.99</div>
+              </div>
+              <div>
+                <button onClick={handleBundle} disabled={bundleLoading} style={{ background: '#a78bfa', color: '#0d0f1a', border: 'none', borderRadius: '10px', padding: '12px 22px', fontSize: '14px', fontWeight: '800', cursor: 'pointer', fontFamily: 'inherit', display: 'block', marginBottom: '4px' }}>{bundleLoading ? 'Redirecting...' : 'Get Bundle'}</button>
+                {bundleError && <div style={{ fontSize: '11px', color: '#ef4444' }}>{bundleError}</div>}
+              </div>
+            </div>
           </div>
           <Link href="/" style={{ fontSize: '13px', color: '#8a8070', textDecoration: 'none' }}>← See all CareerCraft AI tools</Link>
         </div>
