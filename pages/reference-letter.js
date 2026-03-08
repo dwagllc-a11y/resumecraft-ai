@@ -144,6 +144,7 @@ export default function ReferenceLetter() {
               <button onClick={() => navigator.clipboard.writeText(result)} style={{ ...S.btn, background: 'rgba(255,255,255,0.08)', color: '#f0ece0', marginBottom: '10px' }}>Copy to Clipboard</button>
               <button onClick={() => setResult('')} style={{ ...S.btn, background: 'transparent', color: '#8a8070', border: '1px solid rgba(255,255,255,0.1)' }}>Generate Another</button>
               <UpsellBar current="default" />
+            </div>
           )}
         </div>
       </div>
