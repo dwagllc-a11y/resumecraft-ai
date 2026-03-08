@@ -58,7 +58,7 @@ export default function ColdEmail() {
           <div style={{ marginBottom: '32px' }}>
             <div style={{ fontSize: '11px', color: '#f97316', fontWeight: '700', letterSpacing: '0.1em', marginBottom: '8px' }}>COLD EMAIL GENERATOR</div>
             <h1 style={{ fontSize: '36px', fontWeight: '800', letterSpacing: '-0.03em', marginBottom: '8px' }}>Cold Outreach Emails</h1>
-            <p style={{ color: '#8a8070', fontSize: '15px' }}>5 personalized emails to reach hiring managers directly. $7.99 one-time.</p>
+            <p style={{ color: '#8a8070', fontSize: '15px' }}>5 personalized emails to reach hiring managers directly. $16.99 one-time.</p>
           </div>
 
           <div style={{ display: 'grid', gap: '16px', marginBottom: '24px' }}>
@@ -71,7 +71,7 @@ export default function ColdEmail() {
 
           {!paid ? (
             <div style={{ background: 'rgba(249,115,22,0.06)', border: '1px solid rgba(249,115,22,0.2)', borderRadius: '12px', padding: '24px', textAlign: 'center' }}>
-              <div style={{ fontSize: '32px', fontWeight: '900', color: '#f97316', marginBottom: '4px' }}>$7.99</div>
+              <div style={{ fontSize: '32px', fontWeight: '900', color: '#f97316', marginBottom: '4px' }}>$16.99</div>
               <div style={{ fontSize: '13px', color: '#8a8070', marginBottom: '16px' }}>5 emails · 5 different strategies · Copy & send</div>
               <button style={S.btn} onClick={handlePay} disabled={loading}>{loading ? 'Redirecting...' : '✦ Pay & Generate Emails'}</button>
               {error && <div style={{ color: '#ef4444', fontSize: '13px', marginTop: '10px' }}>{error}</div>}

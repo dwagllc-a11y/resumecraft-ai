@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
-      line_items: [{ price_data: { currency: 'usd', product_data: { name: '30/60/90 Day Plan Generator', description: 'Impress from day one with a detailed action plan.' }, unit_amount: 999 }, quantity: 1 }],
+      line_items: [{ price_data: { currency: 'usd', product_data: { name: '30/60/90 Day Plan Generator', description: 'Impress from day one with a detailed action plan.' }, unit_amount: 1699 }, quantity: 1 }],
       mode: 'payment',
       success_url: `${appUrl}/90-day-plan?session_id={CHECKOUT_SESSION_ID}&paid=true`,
       cancel_url: `${appUrl}/90-day-plan`,

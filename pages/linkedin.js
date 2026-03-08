@@ -484,7 +484,7 @@ export default function LinkedInOptimizer() {
               {!paid ? (
                 <div style={{ background: "#fff", border: "2px solid #0a66c2", borderRadius: "16px", padding: "28px", textAlign: "center", marginBottom: "20px" }}>
                   <div style={{ fontSize: "12px", color: "#0a66c2", letterSpacing: "0.1em", fontWeight: "700", marginBottom: "8px" }}>◉ FULL OPTIMIZATION REPORT</div>
-                  <div style={{ fontSize: "42px", fontWeight: "900", color: "#0f1923", letterSpacing: "-0.04em", marginBottom: "4px" }}>$7.99</div>
+                  <div style={{ fontSize: "42px", fontWeight: "900", color: "#0f1923", letterSpacing: "-0.04em", marginBottom: "4px" }}>$16.99</div>
                   <div style={{ fontSize: "14px", color: "#6b7280", marginBottom: "6px" }}>One-time · Instant delivery</div>
                   <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "6px", marginBottom: "22px" }}>
                     {["Profile Score", "Rewritten Headline", "Full About Section", "Missing Keywords", "Action Plan", "Visibility Strategy"].map(f => (

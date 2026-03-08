@@ -17,7 +17,7 @@ export default async function handler(req, res) {
             name: 'ProfilePulse AI — LinkedIn Optimization Report',
             description: 'Full profile score, rewritten headline & about, missing keywords, action plan & visibility strategy.',
           },
-          unit_amount: 799, // $7.99
+          unit_amount: 1699, // $16.99
         },
         quantity: 1,
       }],

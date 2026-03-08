@@ -58,7 +58,7 @@ export default function CareerChange() {
           <div style={{ marginBottom: '32px' }}>
             <div style={{ fontSize: '11px', color: '#e879f9', fontWeight: '700', letterSpacing: '0.1em', marginBottom: '8px' }}>CAREER CHANGE ROADMAP</div>
             <h1 style={{ fontSize: '36px', fontWeight: '800', letterSpacing: '-0.03em', marginBottom: '8px' }}>Switch Industries Successfully</h1>
-            <p style={{ color: '#8a8070', fontSize: '15px' }}>A full AI-powered plan to make your career pivot a reality. $14.99 one-time.</p>
+            <p style={{ color: '#8a8070', fontSize: '15px' }}>A full AI-powered plan to make your career pivot a reality. $25.99 one-time.</p>
           </div>
 
           <div style={{ display: 'grid', gap: '16px', marginBottom: '24px' }}>
@@ -76,7 +76,7 @@ export default function CareerChange() {
 
           {!paid ? (
             <div style={{ background: 'rgba(232,121,249,0.06)', border: '1px solid rgba(232,121,249,0.2)', borderRadius: '12px', padding: '24px', textAlign: 'center' }}>
-              <div style={{ fontSize: '32px', fontWeight: '900', color: '#e879f9', marginBottom: '4px' }}>$14.99</div>
+              <div style={{ fontSize: '32px', fontWeight: '900', color: '#e879f9', marginBottom: '4px' }}>$25.99</div>
               <div style={{ fontSize: '13px', color: '#8a8070', marginBottom: '16px' }}>Viability score · Skill gaps · Full roadmap · Target employers</div>
               <button style={S.btn} onClick={handlePay} disabled={loading}>{loading ? 'Redirecting...' : '✦ Pay & Get My Roadmap'}</button>
               {error && <div style={{ color: '#ef4444', fontSize: '13px', marginTop: '10px' }}>{error}</div>}

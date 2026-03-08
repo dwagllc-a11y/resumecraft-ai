@@ -18,7 +18,7 @@ export default async function handler(req, res) {
             name: 'InterviewOS — AI Interview Coaching Session',
             description: `${formData?.numQuestions || 8} tailored questions, scored answers, detailed feedback & ideal answer frameworks.`,
           },
-          unit_amount: 1299, // $12.99
+          unit_amount: 1699, // $16.99
         },
         quantity: 1,
       }],

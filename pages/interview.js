@@ -398,7 +398,7 @@ export default function InterviewCoach() {
               {!paid ? (
                 <div style={{ ...S.card, border: `1px solid ${C.greenDim}`, background: 'rgba(34,197,94,0.04)', textAlign: 'center' }}>
                   <div style={{ fontSize: '11px', color: C.green, letterSpacing: '0.12em', fontWeight: '700', marginBottom: '10px' }}>▸ SESSION ACCESS</div>
-                  <div style={{ fontSize: '44px', fontWeight: '900', color: C.white, letterSpacing: '-0.04em', marginBottom: '4px', fontFamily: sans }}>$12.99</div>
+                  <div style={{ fontSize: '44px', fontWeight: '900', color: C.white, letterSpacing: '-0.04em', marginBottom: '4px', fontFamily: sans }}>$16.99</div>
                   <div style={{ fontSize: '13px', color: C.muted, marginBottom: '18px' }}>One-time · Unlimited replays · All question types</div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '8px', marginBottom: '22px' }}>
                     {[`${form.numQuestions || 8} tailored questions`, 'Scored 1–10 per answer', 'Detailed feedback', 'Ideal answer framework', 'Session summary report'].map(f => (

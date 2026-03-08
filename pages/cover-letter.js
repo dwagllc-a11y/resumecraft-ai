@@ -59,7 +59,7 @@ export default function CoverLetter() {
           <div style={{ marginBottom: '32px' }}>
             <div style={{ fontSize: '11px', color: '#c8b98a', fontWeight: '700', letterSpacing: '0.1em', marginBottom: '8px' }}>COVER LETTER GENERATOR</div>
             <h1 style={{ fontSize: '36px', fontWeight: '800', letterSpacing: '-0.03em', marginBottom: '8px' }}>AI Cover Letter</h1>
-            <p style={{ color: '#8a8070', fontSize: '15px' }}>Tailored, compelling cover letters in seconds. $7.99 one-time.</p>
+            <p style={{ color: '#8a8070', fontSize: '15px' }}>Tailored, compelling cover letters in seconds. $16.99 one-time.</p>
           </div>
 
           {verifying ? <div style={{ color: '#8a8070' }}>Verifying payment...</div> : (
@@ -79,7 +79,7 @@ export default function CoverLetter() {
 
               {!paid ? (
                 <div style={{ background: 'rgba(200,185,138,0.06)', border: '1px solid rgba(200,185,138,0.2)', borderRadius: '12px', padding: '24px', textAlign: 'center' }}>
-                  <div style={{ fontSize: '32px', fontWeight: '900', color: '#c8b98a', marginBottom: '4px' }}>$7.99</div>
+                  <div style={{ fontSize: '32px', fontWeight: '900', color: '#c8b98a', marginBottom: '4px' }}>$16.99</div>
                   <div style={{ fontSize: '13px', color: '#8a8070', marginBottom: '16px' }}>One-time · Instant download · Unlimited edits</div>
                   <button style={S.btn} onClick={handlePay} disabled={loading}>{loading ? 'Redirecting...' : '✦ Pay & Generate Cover Letter'}</button>
                   {error && <div style={{ color: '#ef4444', fontSize: '13px', marginTop: '10px' }}>{error}</div>}

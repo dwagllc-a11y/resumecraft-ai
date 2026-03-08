@@ -18,7 +18,7 @@ export default async function handler(req, res) {
               name: 'CareerCraft AI — Complete Bundle (All 10 Tools)',
               description: 'All 10 tools: Resume + LinkedIn + Interview + Salary + Cover Letter + JD Analyzer + Reference Letter + Cold Email + 90-Day Plan + Career Change Roadmap',
             },
-            unit_amount: 5999, // $59.99
+            unit_amount: 7999, // $79.99
           },
           quantity: 1,
         },

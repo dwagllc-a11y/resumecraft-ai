@@ -58,7 +58,7 @@ export default function JDAnalyzer() {
           <div style={{ marginBottom: '32px' }}>
             <div style={{ fontSize: '11px', color: '#60a5fa', fontWeight: '700', letterSpacing: '0.1em', marginBottom: '8px' }}>JD ANALYZER</div>
             <h1 style={{ fontSize: '36px', fontWeight: '800', letterSpacing: '-0.03em', marginBottom: '8px' }}>Job Description Analyzer</h1>
-            <p style={{ color: '#8a8070', fontSize: '15px' }}>Paste any JD and get a tailored action plan to land the role. $6.99 one-time.</p>
+            <p style={{ color: '#8a8070', fontSize: '15px' }}>Paste any JD and get a tailored action plan to land the role. $8.99 one-time.</p>
           </div>
 
           <div style={{ display: 'grid', gap: '16px', marginBottom: '24px' }}>
@@ -68,7 +68,7 @@ export default function JDAnalyzer() {
 
           {!paid ? (
             <div style={{ background: 'rgba(96,165,250,0.06)', border: '1px solid rgba(96,165,250,0.2)', borderRadius: '12px', padding: '24px', textAlign: 'center' }}>
-              <div style={{ fontSize: '32px', fontWeight: '900', color: '#60a5fa', marginBottom: '4px' }}>$6.99</div>
+              <div style={{ fontSize: '32px', fontWeight: '900', color: '#60a5fa', marginBottom: '4px' }}>$8.99</div>
               <div style={{ fontSize: '13px', color: '#8a8070', marginBottom: '16px' }}>Match score · Resume tweaks · Interview topics · Keywords</div>
               <button style={S.btn} onClick={handlePay} disabled={loading}>{loading ? 'Redirecting...' : '✦ Pay & Analyze JD'}</button>
               {error && <div style={{ color: '#ef4444', fontSize: '13px', marginTop: '10px' }}>{error}</div>}

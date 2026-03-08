@@ -461,7 +461,7 @@ export default function SalaryNegotiator() {
 
                 {!paid ? (
                   <div style={{ textAlign: 'center' }}>
-                    <div style={{ fontSize: '44px', fontWeight: '900', color: C.navy, fontFamily: serif, letterSpacing: '-0.04em', lineHeight: 1 }}>$9.99</div>
+                    <div style={{ fontSize: '44px', fontWeight: '900', color: C.navy, fontFamily: serif, letterSpacing: '-0.04em', lineHeight: 1 }}>$16.99</div>
                     <div style={{ fontSize: '13px', color: C.muted, marginBottom: '20px', marginTop: '4px' }}>One-time · Instant delivery · Worth thousands</div>
                     <button style={{ ...S.btnGold, fontSize: '15px', padding: '15px 48px', opacity: loading ? 0.7 : 1 }} onClick={handleCheckout} disabled={loading}>
                       {loading ? 'Redirecting...' : '🔒 Pay & Generate My Script'}

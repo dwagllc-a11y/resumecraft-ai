@@ -246,7 +246,7 @@ export default function Builder() {
               {!paid ? (
                 <div style={{ background: 'rgba(200,185,138,0.08)', border: '1px solid rgba(200,185,138,0.25)', borderRadius: '12px', padding: '24px', marginBottom: '20px', textAlign: 'center' }}>
                   <div style={{ fontSize: '13px', color: '#c8b98a', letterSpacing: '0.06em', marginBottom: '8px' }}>✦ ONE-TIME PAYMENT</div>
-                  <div style={{ fontSize: '40px', fontWeight: '700', color: '#f0ece0', marginBottom: '8px' }}>$9.99</div>
+                  <div style={{ fontSize: '40px', fontWeight: '700', color: '#f0ece0', marginBottom: '8px' }}>$16.99</div>
                   <div style={{ fontSize: '14px', color: '#8a8070', marginBottom: '20px' }}>Instant resume · Unlimited reprints · ATS-optimized</div>
                   <button style={{ ...btnPrimary, fontSize: '16px', padding: '14px 40px', opacity: loading ? 0.7 : 1 }} onClick={handleCheckout} disabled={loading}>
                     {loading ? 'Redirecting to checkout...' : '🔒 Pay & Generate Resume'}

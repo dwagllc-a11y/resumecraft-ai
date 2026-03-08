@@ -58,7 +58,7 @@ export default function NinetyDayPlan() {
           <div style={{ marginBottom: '32px' }}>
             <div style={{ fontSize: '11px', color: '#22c55e', fontWeight: '700', letterSpacing: '0.1em', marginBottom: '8px' }}>30/60/90 DAY PLAN GENERATOR</div>
             <h1 style={{ fontSize: '36px', fontWeight: '800', letterSpacing: '-0.03em', marginBottom: '8px' }}>Impress From Day One</h1>
-            <p style={{ color: '#8a8070', fontSize: '15px' }}>A detailed action plan that shows hiring managers you mean business. $9.99 one-time.</p>
+            <p style={{ color: '#8a8070', fontSize: '15px' }}>A detailed action plan that shows hiring managers you mean business. $16.99 one-time.</p>
           </div>
 
           <div style={{ display: 'grid', gap: '16px', marginBottom: '24px' }}>
@@ -71,7 +71,7 @@ export default function NinetyDayPlan() {
 
           {!paid ? (
             <div style={{ background: 'rgba(34,197,94,0.06)', border: '1px solid rgba(34,197,94,0.2)', borderRadius: '12px', padding: '24px', textAlign: 'center' }}>
-              <div style={{ fontSize: '32px', fontWeight: '900', color: '#22c55e', marginBottom: '4px' }}>$9.99</div>
+              <div style={{ fontSize: '32px', fontWeight: '900', color: '#22c55e', marginBottom: '4px' }}>$16.99</div>
               <div style={{ fontSize: '13px', color: '#8a8070', marginBottom: '16px' }}>Full 90-day roadmap · Quick wins · Smart questions to ask</div>
               <button style={S.btn} onClick={handlePay} disabled={loading}>{loading ? 'Redirecting...' : '✦ Pay & Generate Plan'}</button>
               {error && <div style={{ color: '#ef4444', fontSize: '13px', marginTop: '10px' }}>{error}</div>}

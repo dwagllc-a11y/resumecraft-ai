@@ -17,7 +17,7 @@ export default async function handler(req, res) {
             name: 'NegotiateAI — Salary Negotiation Script Package',
             description: 'Personalized scripts, market analysis, objection handlers, BATNA strategy & beyond-salary perks guide.',
           },
-          unit_amount: 999, // $9.99
+          unit_amount: 1699, // $16.99
         },
         quantity: 1,
       }],

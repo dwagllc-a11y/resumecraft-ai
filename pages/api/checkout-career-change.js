@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
-      line_items: [{ price_data: { currency: 'usd', product_data: { name: 'Career Change Roadmap', description: 'Full AI-powered plan to successfully switch industries.' }, unit_amount: 1499 }, quantity: 1 }],
+      line_items: [{ price_data: { currency: 'usd', product_data: { name: 'Career Change Roadmap', description: 'Full AI-powered plan to successfully switch industries.' }, unit_amount: 2599 }, quantity: 1 }],
       mode: 'payment',
       success_url: `${appUrl}/career-change?session_id={CHECKOUT_SESSION_ID}&paid=true`,
       cancel_url: `${appUrl}/career-change`,

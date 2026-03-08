@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   try {
     const { formData } = req.body
     const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
-    const priceCents = parseInt(process.env.RESUME_PRICE_CENTS || '999')
+    const priceCents = parseInt(process.env.RESUME_PRICE_CENTS || '1699')
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],

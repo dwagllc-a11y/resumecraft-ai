@@ -57,7 +57,7 @@ export default function ReferenceLetter() {
           <div style={{ marginBottom: '32px' }}>
             <div style={{ fontSize: '11px', color: '#a78bfa', fontWeight: '700', letterSpacing: '0.1em', marginBottom: '8px' }}>REFERENCE LETTER WRITER</div>
             <h1 style={{ fontSize: '36px', fontWeight: '800', letterSpacing: '-0.03em', marginBottom: '8px' }}>Professional Reference Letter</h1>
-            <p style={{ color: '#8a8070', fontSize: '15px' }}>A glowing, credible reference letter in seconds. $5.99 one-time.</p>
+            <p style={{ color: '#8a8070', fontSize: '15px' }}>A glowing, credible reference letter in seconds. $16.99 one-time.</p>
           </div>
 
           <div style={{ display: 'grid', gap: '16px', marginBottom: '24px' }}>
@@ -70,7 +70,7 @@ export default function ReferenceLetter() {
 
           {!paid ? (
             <div style={{ background: 'rgba(167,139,250,0.06)', border: '1px solid rgba(167,139,250,0.2)', borderRadius: '12px', padding: '24px', textAlign: 'center' }}>
-              <div style={{ fontSize: '32px', fontWeight: '900', color: '#a78bfa', marginBottom: '4px' }}>$5.99</div>
+              <div style={{ fontSize: '32px', fontWeight: '900', color: '#a78bfa', marginBottom: '4px' }}>$16.99</div>
               <div style={{ fontSize: '13px', color: '#8a8070', marginBottom: '16px' }}>One-time · Instant · Ready to send</div>
               <button style={S.btn} onClick={handlePay} disabled={loading}>{loading ? 'Redirecting...' : '✦ Pay & Generate Reference Letter'}</button>
               {error && <div style={{ color: '#ef4444', fontSize: '13px', marginTop: '10px' }}>{error}</div>}
