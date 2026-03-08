@@ -18,7 +18,7 @@ export default async function handler(req, res) {
               name: 'CareerCraft AI — Complete Bundle',
               description: 'All 4 tools: AI Resume Builder + LinkedIn Optimizer + Interview Coach + Salary Negotiation Scripts',
             },
-            unit_amount: 2997, // $29.97 (save ~$11)
+            unit_amount: 4999, // $49.99
           },
           quantity: 1,
         },
