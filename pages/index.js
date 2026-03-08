@@ -70,14 +70,14 @@ export default function Home() {
           <div style={{ background: 'linear-gradient(135deg, rgba(200,185,138,0.12), rgba(200,185,138,0.06))', border: '1px solid rgba(200,185,138,0.35)', borderRadius: '16px', padding: '28px 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '20px' }}>
             <div style={{ textAlign: 'left' }}>
               <div style={{ fontSize: '11px', color: '#c8b98a', fontWeight: '800', letterSpacing: '0.1em', marginBottom: '6px' }}>BEST VALUE</div>
-              <div style={{ fontSize: '20px', fontWeight: '800', color: '#f0ece0', marginBottom: '4px' }}>Core Bundle — Top 4 Tools</div>
-              <div style={{ fontSize: '13px', color: '#8a8070' }}>Resume + LinkedIn + Interview + Salary Scripts</div>
+              <div style={{ fontSize: '20px', fontWeight: '800', color: '#f0ece0', marginBottom: '4px' }}>Complete Bundle — All 10 Tools</div>
+              <div style={{ fontSize: '13px', color: '#8a8070' }}>Resume + LinkedIn + Interview + Salary + Cover Letter + JD Analyzer + Reference Letter + Cold Email + 90-Day Plan + Career Roadmap</div>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
               <div style={{ textAlign: 'center' }}>
                 <div style={{ fontSize: '13px', color: '#6a6050', textDecoration: 'line-through' }}>$83.93</div>
-                <div style={{ fontSize: '34px', fontWeight: '900', color: '#c8b98a', lineHeight: 1 }}>$49.99</div>
-                <div style={{ fontSize: '11px', color: '#22c55e', fontWeight: '700' }}>SAVE $33</div>
+                <div style={{ fontSize: '34px', fontWeight: '900', color: '#c8b98a', lineHeight: 1 }}>$59.99</div>
+                <div style={{ fontSize: '11px', color: '#22c55e', fontWeight: '700' }}>SAVE $24</div>
               </div>
               <div>
                 <button onClick={handleBundle} disabled={bundleLoading} style={{ background: 'linear-gradient(135deg, #c8b98a, #a8965a)', color: '#1a1208', border: 'none', borderRadius: '10px', padding: '13px 28px', fontSize: '14px', fontWeight: '800', cursor: bundleLoading ? 'not-allowed' : 'pointer', fontFamily: 'inherit', opacity: bundleLoading ? 0.7 : 1, display: 'block', marginBottom: '6px' }}>
