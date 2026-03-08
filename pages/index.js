@@ -1,7 +1,28 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { useState } from 'react'
 
 export default function Home() {
+  const [bundleLoading, setBundleLoading] = useState(false)
+  const [bundleError, setBundleError] = useState('')
+
+  const handleBundle = async () => {
+    setBundleLoading(true)
+    setBundleError('')
+    try {
+      const res = await fetch('/api/checkout-bundle', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+      })
+      const data = await res.json()
+      if (data.url) window.location.href = data.url
+      else setBundleError(data.error || 'Could not start checkout.')
+    } catch (e) {
+      setBundleError('Something went wrong.')
+    }
+    setBundleLoading(false)
+  }
+
   const products = [
     { emoji: '📄', brand: 'RESUMECRAFT AI', brandColor: '#c8b98a', title: 'AI Resume Builder', desc: 'Fill in your details, pay once, and get a polished ATS-optimized resume in 2 minutes.', features: ['ATS-optimized formatting', 'Achievement-focused bullets', 'Instant download / print', 'Claude AI-powered'], price: '$9.99', priceColor: '#c8b98a', href: '/builder', btnBg: 'linear-gradient(135deg, #c8b98a, #a8965a)', btnColor: '#1a1208', cardBorder: 'rgba(200,185,138,0.25)', cardBg: 'rgba(255,255,255,0.04)', btnLabel: 'Build Resume' },
     { emoji: '💼', brand: 'PROFILEPULSE AI', brandColor: '#60a5fa', title: 'LinkedIn Optimizer', desc: 'Full profile score, rewritten headline, About section, missing keywords, and action plan.', features: ['Profile score (6 dimensions)', 'Rewritten headline & about', 'Missing keywords', 'Recruiter visibility strategy'], price: '$7.99', priceColor: '#60a5fa', href: '/linkedin', btnBg: 'linear-gradient(135deg, #0a66c2, #0856a8)', btnColor: '#fff', cardBorder: 'rgba(10,102,194,0.3)', cardBg: 'rgba(10,102,194,0.08)', btnLabel: 'Optimize Profile' },
@@ -25,7 +46,6 @@ export default function Home() {
             ))}
           </div>
         </nav>
-
         <div style={{ maxWidth: '940px', margin: '0 auto', padding: '64px 20px 48px', textAlign: 'center' }}>
           <div style={{ display: 'inline-block', background: 'rgba(200,185,138,0.08)', border: '1px solid rgba(200,185,138,0.2)', borderRadius: '20px', padding: '5px 16px', fontSize: '11px', color: '#c8b98a', letterSpacing: '0.12em', fontWeight: '700', marginBottom: '24px' }}>AI-POWERED CAREER TOOLS</div>
           <h1 style={{ fontSize: 'clamp(30px, 5vw, 56px)', fontWeight: '800', lineHeight: '1.1', letterSpacing: '-0.04em', marginBottom: '16px' }}>
@@ -34,8 +54,7 @@ export default function Home() {
           <p style={{ fontSize: '16px', color: '#8a8070', lineHeight: '1.7', maxWidth: '480px', margin: '0 auto 44px' }}>
             Four AI-powered tools covering every stage of your job search.
           </p>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px', textAlign: 'left', marginBottom: '20px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px', textAlign: 'left', marginBottom: '28px' }}>
             {products.map((p) => (
               <div key={p.href} style={{ background: p.cardBg, border: `1px solid ${p.cardBorder}`, borderRadius: '18px', padding: '26px', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ fontSize: '26px', marginBottom: '10px' }}>{p.emoji}</div>
@@ -52,24 +71,26 @@ export default function Home() {
               </div>
             ))}
           </div>
-
-          <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '10px', padding: '12px 22px', display: 'inline-block' }}>
-            <span style={{ fontSize: '14px', color: '#8a8070' }}>Bundle all 4 = <strong style={{ color: '#c8b98a' }}>$40.96 total</strong></span>
+          <div style={{ background: 'linear-gradient(135deg, rgba(200,185,138,0.12), rgba(200,185,138,0.06))', border: '1px solid rgba(200,185,138,0.35)', borderRadius: '16px', padding: '28px 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '20px' }}>
+            <div style={{ textAlign: 'left' }}>
+              <div style={{ fontSize: '11px', color: '#c8b98a', fontWeight: '800', letterSpacing: '0.1em', marginBottom: '6px' }}>BEST VALUE</div>
+              <div style={{ fontSize: '22px', fontWeight: '800', color: '#f0ece0', marginBottom: '4px' }}>Complete Bundle — All 4 Tools</div>
+              <div style={{ fontSize: '13px', color: '#8a8070' }}>Resume + LinkedIn + Interview + Salary Scripts</div>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: '13px', color: '#6a6050', textDecoration: 'line-through' }}>$40.96</div>
+                <div style={{ fontSize: '36px', fontWeight: '900', color: '#c8b98a', lineHeight: 1 }}>$29.97</div>
+                <div style={{ fontSize: '11px', color: '#22c55e', fontWeight: '700' }}>SAVE $11</div>
+              </div>
+              <div>
+                <button onClick={handleBundle} disabled={bundleLoading} style={{ background: 'linear-gradient(135deg, #c8b98a, #a8965a)', color: '#1a1208', border: 'none', borderRadius: '10px', padding: '14px 32px', fontSize: '15px', fontWeight: '800', cursor: bundleLoading ? 'not-allowed' : 'pointer', fontFamily: 'inherit', opacity: bundleLoading ? 0.7 : 1, boxShadow: '0 4px 20px rgba(200,185,138,0.3)', display: 'block', marginBottom: '6px' }}>
+                  {bundleLoading ? 'Redirecting...' : 'Get Bundle Deal'}
+                </button>
+                <div style={{ fontSize: '11px', color: '#4a4535', textAlign: 'center' }}>Powered by Stripe</div>
+                {bundleError && <div style={{ fontSize: '12px', color: '#ef4444', marginTop: '6px' }}>{bundleError}</div>}
+              </div>
+            </div>
           </div>
         </div>
-
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '48px', padding: '32px 20px', borderTop: '1px solid rgba(255,255,255,0.05)', flexWrap: 'wrap' }}>
-          {[['3,200+', 'Professionals Helped'], ['< 2 min', 'Average Delivery'], ['Claude AI', 'Powered By']].map(([stat, label]) => (
-            <div key={label} style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '24px', fontWeight: '800', color: '#c8b98a' }}>{stat}</div>
-              <div style={{ fontSize: '11px', color: '#4a4535', letterSpacing: '0.08em', textTransform: 'uppercase', marginTop: '4px' }}>{label}</div>
-            </div>
-          ))}
-        </div>
-        <div style={{ textAlign: 'center', padding: '18px', color: '#2a2520', fontSize: '11px', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
-          {new Date().getFullYear()} CareerCraft AI
-        </div>
-      </div>
-    </>
-  )
-}
+        <div style={{ display:
