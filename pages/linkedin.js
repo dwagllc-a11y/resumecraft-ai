@@ -595,7 +595,10 @@ export default function LinkedInOptimizer() {
           )}
         </div>
 
-        <div style={{ textAlign: "center", padding: "24px", color: "#d1d5db", fontSize: "12px", borderTop: "1px solid #e8ecf2", marginTop: "20px" }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 20px 32px' }}>
+          <UpsellBar current="linkedin" />
+        </div>
+                <div style={{ textAlign: "center", padding: "24px", color: "#d1d5db", fontSize: "12px", borderTop: "1px solid #e8ecf2", marginTop: "20px" }}>
           © {new Date().getFullYear()} ProfilePulse AI · Powered by Claude AI
         </div>
       </div>

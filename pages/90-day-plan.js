@@ -170,7 +170,9 @@ export default function NinetyDayPlan() {
                 </div>
               )}
               <button onClick={() => setResult(null)} style={{ ...S.btn, background: 'transparent', color: '#8a8070', border: '1px solid rgba(255,255,255,0.1)' }}>Generate Another Plan</button>
-            </div>
+            
+                  <UpsellBar current="default" />
+                </div>
           )}
         </div>
       </div>

@@ -156,7 +156,9 @@ export default function ColdEmail() {
               )}
               <button onClick={() => navigator.clipboard.writeText(`Subject: ${result.emails[activeEmail].subject}\n\n${result.emails[activeEmail].body}`)} style={{ ...S.btn, background: 'rgba(255,255,255,0.08)', color: '#f0ece0', marginBottom: '10px' }}>Copy Email {activeEmail + 1}</button>
               <button onClick={() => setResult(null)} style={{ ...S.btn, background: 'transparent', color: '#8a8070', border: '1px solid rgba(255,255,255,0.1)' }}>Generate New Emails</button>
-            </div>
+            
+                  <UpsellBar current="default" />
+                </div>
           )}
         </div>
       </div>

@@ -529,7 +529,10 @@ export default function InterviewCoach() {
           )}
         </div>
 
-        <div style={{ textAlign: 'center', padding: '20px', color: '#1a2e1a', fontSize: '11px', borderTop: `1px solid ${C.border}`, letterSpacing: '0.08em' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 20px 32px' }}>
+          <UpsellBar current="interview" />
+        </div>
+                <div style={{ textAlign: 'center', padding: '20px', color: '#1a2e1a', fontSize: '11px', borderTop: `1px solid ${C.border}`, letterSpacing: '0.08em' }}>
           © {new Date().getFullYear()} INTERVIEWOS · POWERED BY CLAUDE AI
         </div>
       </div>

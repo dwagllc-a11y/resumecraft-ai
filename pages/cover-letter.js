@@ -152,6 +152,7 @@ export default function CoverLetter() {
                   <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '28px', marginBottom: '16px', whiteSpace: 'pre-wrap', lineHeight: '1.8', fontSize: '14px' }}>{result}</div>
                   <button onClick={() => { navigator.clipboard.writeText(result) }} style={{ ...S.btn, background: 'rgba(255,255,255,0.08)', color: '#f0ece0', marginBottom: '10px' }}>Copy to Clipboard</button>
                   <button onClick={() => setResult('')} style={{ ...S.btn, background: 'transparent', color: '#8a8070', border: '1px solid rgba(255,255,255,0.1)' }}>Generate Another</button>
+                  <UpsellBar current="cover-letter" />
                 </div>
               )}
             </>

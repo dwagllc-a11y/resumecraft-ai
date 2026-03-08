@@ -552,7 +552,10 @@ export default function SalaryNegotiator() {
           )}
         </div>
 
-        <div style={{ textAlign: 'center', padding: '24px', color: C.borderDark, fontSize: '12px', borderTop: `1px solid ${C.border}`, fontFamily: sans }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 20px 32px' }}>
+          <UpsellBar current="salary" />
+        </div>
+                <div style={{ textAlign: 'center', padding: '24px', color: C.borderDark, fontSize: '12px', borderTop: `1px solid ${C.border}`, fontFamily: sans }}>
           © {new Date().getFullYear()} NegotiateAI · Powered by Claude AI
         </div>
       </div>

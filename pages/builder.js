@@ -342,8 +342,8 @@ export default function Builder() {
               <div style={{ background: '#fff', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }}>
                 <div ref={printRef} dangerouslySetInnerHTML={{ __html: resumeHTML }} style={{ color: '#333' }} />
               </div>
-            </div>
               <UpsellBar current="builder" />
+            </div>
           )}
         </div>
       </div>

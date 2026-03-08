@@ -161,7 +161,9 @@ export default function JDAnalyzer() {
                 </div>
               )}
               <button onClick={() => setResult(null)} style={{ ...S.btn, background: 'transparent', color: '#8a8070', border: '1px solid rgba(255,255,255,0.1)' }}>Analyze Another JD</button>
-            </div>
+            
+                  <UpsellBar current="jd-analyzer" />
+                </div>
           )}
         </div>
       </div>
